@@ -11,3 +11,4 @@ Based on [Miryoku](https://github.com/manna-harbour/miryoku) with the following 
 - **QWERTY** base layer instead of Colemak-DH
 - **Vim-style navigation** (hjkl = left/down/up/right) on NAV layer
 - **Programmer-friendly symbols** on right side of SYM layer
+- **Right thumb row**: Del/SYM, Enter/FUN, Bksp (plain key for hold-to-repeat)
