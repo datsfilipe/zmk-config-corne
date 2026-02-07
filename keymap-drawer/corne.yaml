@@ -40,9 +40,9 @@ layers:
   - {t: ESC, h: MEDIA}
   - {t: SPACE, h: NAV}
   - {t: TAB, h: NUM}
-  - {t: ENTER, h: SYM}
-  - {t: BKSP, h: FUN}
-  - DEL
+  - {t: DEL, h: SYM}
+  - {t: ENTER, h: FUN}
+  - BKSP
   NAV:
   - ''
   - ''
@@ -83,9 +83,9 @@ layers:
   - ''
   - {type: held}
   - ''
+  - DEL
   - ENTER
   - BKSP
-  - DEL
   NUM:
   - ''
   - '['
@@ -108,7 +108,7 @@ layers:
   - ''
   - RSHFT
   - RCTRL
-  - RALT
+  - LALT
   - RGUI
   - ''
   - ''
@@ -194,7 +194,7 @@ layers:
   - ''
   - RSHFT
   - RCTRL
-  - RALT
+  - LALT
   - RGUI
   - ''
   - ''
@@ -225,7 +225,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - RALT
   - ''
   - ''
   - ''
