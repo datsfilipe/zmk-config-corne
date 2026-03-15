@@ -10,86 +10,87 @@
 #define MEDIA 5
 
 / {
-  behaviors {
-    hm: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
-    };
-    ltr: layer_tap_repeat {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <200>;
-        flavor = "tap-preferred";
-        bindings = <&mo>, <&kp>;
-    };
-  };
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 
-  keymap {
-    compatible = "zmk,keymap";
-
-    base_layer {
-      label = "BASE";
-      bindings = <
-&none  &kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y      &kp U        &kp I        &kp O       &kp P          &none
-&none  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G          &kp H      &hm RSHFT J  &hm RCTRL K  &hm LALT L  &hm RGUI SEMI  &none
-&none  &kp Z       &kp X       &kp C        &kp V        &kp B          &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH       &none
-                               &lt MEDIA ESC &lt SYM SPACE &lt FUN TAB  &lt NUM DEL &lt NAV ENTER &kp BKSP
-      >;
+        ltr: layer_tap_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
     };
 
-    nav_layer {
-      label = "NAV";
-      bindings = <
-&none  &none     &none     &none      &none      &none        &none      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp CAPS   &none
-&none  &kp LC(Z) &kp LC(X) &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp INS    &none      &none      &none      &none      &none
-                           &none      &trans     &none        &kp DEL    &kp ENTER  &kp BKSP
-      >;
-    };
+    keymap {
+        compatible = "zmk,keymap";
 
-    num_layer {
-      label = "NUM";
-      bindings = <
-&none  &kp LBKT  &kp N7  &kp N8  &kp N9  &kp RBKT     &none  &none      &none      &none     &none     &none
-&none  &kp SEMI  &kp N4  &kp N5  &kp N6  &kp EQUAL    &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
-&none  &kp GRAVE &kp N1  &kp N2  &kp N3  &kp BSLH     &none  &none      &none      &none     &none     &none
-                         &kp DOT &kp N0  &trans       &none  &none      &none
-      >;
-    };
+        base_layer {
+            label = "BASE";
+            bindings = <
+&none  &kp Q       &kp W       &kp E          &kp R          &kp T          &kp Y        &kp U          &kp I        &kp O       &kp P          &none
+&none  &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHFT F    &kp G          &kp H        &hm RSHFT J    &hm RCTRL K  &hm LALT L  &hm RGUI SEMI  &none
+&none  &kp Z       &kp X       &kp C          &kp V          &kp B          &kp N        &kp M          &kp COMMA    &kp DOT     &kp FSLH       &none
+                               &lt MEDIA ESC  &lt SYM SPACE  &lt FUN TAB    &lt NUM DEL  &lt NAV ENTER  &kp BKSP
+            >;
+        };
 
-    sym_layer {
-      label = "SYM";
-      bindings = <
-&none  &none     &none     &none      &none      &none    &kp LPAR  &kp RPAR  &kp MINUS  &kp PLUS  &kp EQUAL  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LBKT  &kp RBKT  &kp UNDER  &kp PIPE  &kp SQT    &none
-&none  &none     &none     &none      &none      &none    &kp LBRC  &kp RBRC  &kp BSLH   &kp DQT   &kp TILDE  &none
+        nav_layer {
+            label = "NAV";
+            bindings = <
+&none  &none      &none      &none      &none      &none        &none     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END   &none
+&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp CAPS  &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp INS   &none      &none      &none      &none     &none
+                             &none      &trans     &none        &kp DEL   &kp ENTER  &kp BKSP
+            >;
+        };
+
+        num_layer {
+            label = "NUM";
+            bindings = <
+&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &none      &none      &none     &none     &none
+&none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
+&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none  &none      &none      &none     &none     &none
+                          &kp DOT  &kp N0  &trans       &none  &none      &none
+            >;
+        };
+
+        sym_layer {
+            label = "SYM";
+            bindings = <
+&none  &none     &none     &none      &none      &none    &kp LPAR  &kp RPAR  &kp MINUS  &kp PLUS   &kp EQUAL  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LBKT  &kp RBKT  &kp UNDER  &kp GRAVE  &kp SQT    &none
+&none  &none     &none     &none      &none      &none    &kp LBRC  &kp RBRC  &kp BSLH   &kp DQT    &kp TILDE  &none
                            &none      &none      &none    &trans    &none     &none
-      >;
-    };
+            >;
+        };
 
-    fun_layer {
-      label = "FUN";
-      bindings = <
+        fun_layer {
+            label = "FUN";
+            bindings = <
 &none  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN          &none  &none      &none      &none     &none     &none
 &none  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK           &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
 &none  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &none  &none      &none      &none     &none     &none
                         &none   &none   &none              &none  &trans     &none
-      >;
-    };
+            >;
+        };
 
-    media_layer {
-      label = "MEDIA";
-      bindings = <
-&none  &bt BT_CLR    &none         &none         &none         &none          &none       &none        &none        &kp RALT    &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT  &none  &none
-&none  &none         &none         &none         &none         &none          &none       &none        &none        &none       &none  &none
-                                   &trans        &none         &none          &kp C_STOP  &kp C_PP     &kp C_MUTE
-      >;
+        media_layer {
+            label = "MEDIA";
+            bindings = <
+&none  &bt BT_CLR    &none         &none         &none         &none           &none       &none         &none         &kp RALT    &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &none  &none
+&none  &none         &none         &none         &none         &none           &none       &none         &none         &none       &none  &none
+                                   &trans        &none         &none           &kp C_STOP  &kp C_PP      &kp C_MUTE
+            >;
+        };
     };
-  };
 };
