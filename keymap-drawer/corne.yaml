@@ -45,10 +45,10 @@ layers:
   - BKSP
   NAV:
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '&tty4'
+  - '&tty3'
+  - '&tty2'
+  - '&tty1'
   - ''
   - HOME
   - PG DN
@@ -217,7 +217,7 @@ layers:
   - CAPS
   MEDIA:
   - ''
-  - BT CLR
+  - ''
   - ''
   - ''
   - ''
@@ -229,11 +229,11 @@ layers:
   - ''
   - ''
   - ''
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - PREV
   - VOL DN
   - VOL UP
