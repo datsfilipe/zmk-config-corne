@@ -223,8 +223,8 @@ layers:
   - ''
   - ''
   - ''
-  - '&bl BL_DEC'
-  - '&bl BL_INC'
+  - BRI DEC
+  - BRI UP
   - ''
   - ''
   - ''
