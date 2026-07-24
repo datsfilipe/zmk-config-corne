@@ -50,11 +50,11 @@ layers:
   - ''
   - ''
   - ''
-  - ''
   - HOME
   - PG DN
   - PG UP
   - END
+  - DEL
   - ''
   - ''
   - LGUI
@@ -66,7 +66,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - CAPS
+  - INS
   - ''
   - ''
   - Ctl+Z
@@ -74,7 +74,7 @@ layers:
   - Ctl+C
   - Ctl+V
   - Ctl+Y
-  - INS
+  - ''
   - ''
   - ''
   - ''
@@ -212,9 +212,9 @@ layers:
   - ''
   - ''
   - {type: held}
-  - ''
+  - '&caps_word'
   - {t: ▽, type: trans}
-  - ''
+  - CAPS
   MEDIA:
   - ''
   - BT CLR
@@ -223,9 +223,9 @@ layers:
   - ''
   - ''
   - ''
+  - '&bl BL_DEC'
+  - '&bl BL_INC'
   - ''
-  - ''
-  - RALT
   - ''
   - ''
   - ''
